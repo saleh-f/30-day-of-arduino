@@ -33,21 +33,24 @@ if(cmd.value==0xFFE21D){//GREEN
 }
 
 if(cmd.value==0xFF22DD){//YELLOW
-      analogWrite(red,255);
+  analogWrite(red,255);
   analogWrite(green,80);
   analogWrite(blue,0);
+  cmd.value=0;
 }
 
 if(cmd.value==0xFF02FD){//PURPLE
-    analogWrite(red,130);
+  analogWrite(red,130);
   analogWrite(blue,170);
   analogWrite(green,0);
+  cmd.value=0;
 }
 
 if(cmd.value==0xFFC23D){//CYAN
       analogWrite(red,0);
   analogWrite(green,255);
   analogWrite(blue,255);
+  cmd.value=0;
 }
 
 if(cmd.value==0xFFE01F){//MAGENTA
