@@ -13,7 +13,7 @@ void setup() {
 
 void loop() {
   while(IR.decode(&cmd)==0){}
-  Serial.println(cmd.value,HEX);
+   Serial.println(cmd.value,HEX);
   if(cmd.value==0xFE708F)digitalWrite(ledPin,HIGH);
   if(cmd.value==0xFE58A7)digitalWrite(ledPin,LOW);
   if(cmd.value==0xFE609F)digitalWrite(ledPinR,HIGH);
