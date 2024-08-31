@@ -1,8 +1,8 @@
 int read;
 int sensorPin=A0;
-int green=8;
-int yellow=9;
-int red=10;
+int green=6;
+int yellow=7;
+int red=8;
 void setup() {
   pinMode(green,OUTPUT);
   pinMode(yellow,OUTPUT);
