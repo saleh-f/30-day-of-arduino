@@ -63,8 +63,6 @@ void setup() {
   for (byte i = 0; i < 6; i++) {
     key.keyByte[i] = 0xFF;
   }
-
-
 }
  
 void loop() {
@@ -90,6 +88,8 @@ void loop() {
     ID.toUpperCase();
     Serial.print(F("The NUID tag is:"));
     Serial.println(ID);
+
+// case number 1    
   if(ID=="6A 60 1 81 "){
     digitalWrite(allowLed,HIGH);
     digitalWrite(heltLed,LOW);
@@ -102,6 +102,7 @@ void loop() {
     delay(500);
     digitalWrite(allowLed,LOW);
   }
+// case number 2  
   else if(ID=="1 2 3 4 "){
     digitalWrite(allowLed,HIGH);
     digitalWrite(heltLed,LOW);
@@ -114,6 +115,7 @@ void loop() {
     delay(500);
     digitalWrite(allowLed,LOW);
   }
+// any other cards which leads to wrong
   else{
     digitalWrite(wrongLed,HIGH);
     digitalWrite(heltLed,LOW);
@@ -132,5 +134,5 @@ void loop() {
 
   // Stop encryption on PCD
   rfid.PCD_StopCrypto1();
-  ID="";
+  ID="";// keeps ID clear for next loop
 }
