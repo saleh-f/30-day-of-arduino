@@ -6,11 +6,11 @@ void setup() {
 }
 
 void loop() {
-   analogValue = analogRead(waterSensorAnalogPin); // Read the water level
+   analogValue = digitalRead(waterSensorAnalogPin); // Read the water level
   // Print values to the Serial Monitor
   Serial.print("(Water Level): ");
   Serial.println(analogValue);
 
-  delay(200); // Wait 0.2 second before next reading
+  delay(300); // Wait 0.2 second before next reading
 }
 
